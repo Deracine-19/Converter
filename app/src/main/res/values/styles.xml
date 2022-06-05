@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SpinnerTheme">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/alright_sans</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:background">@drawable/spnr_bg_resource</item>
+    </style>
+
+    <style name="SpinnerTheme_output">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/alright_sans</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:background">@drawable/spnr_bg_resource_output</item>
+    </style>
+</resources>
