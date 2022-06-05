@@ -2,6 +2,7 @@
     <string name="app_name">UnitConverter</string>
     <string name="title">Conversion Aid</string>
     <string name="hint">tap to change the value</string>
+    <string name="placeholder">0.0</string>
     
     <string-array name="categories">
         <item>Longitud</item>

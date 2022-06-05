@@ -27,7 +27,6 @@
         android:layout_width="199dp"
         android:layout_height="24dp"
         android:layout_marginTop="44dp"
-        android:editable="false"
         android:fontFamily="@font/alright_sans_light"
         android:text="@string/hint"
         android:textAlignment="center"
@@ -87,7 +86,6 @@
         android:layout_width="199dp"
         android:layout_height="24dp"
         android:layout_marginTop="28dp"
-        android:editable="false"
         android:fontFamily="@font/alright_sans_light"
         android:text="@string/hint"
         android:textAlignment="center"
@@ -105,15 +103,15 @@
         android:background="@android:color/transparent"
         android:ems="10"
         android:fontFamily="@font/code_pro"
-        android:hint="0.0"
+        android:hint="@string/placeholder"
         android:inputType="textPersonName"
-        android:numeric="decimal"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spnr_units" />
+        app:layout_constraintTop_toBottomOf="@+id/spnr_units"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/txt_output"
@@ -125,7 +123,7 @@
         android:ems="10"
         android:fontFamily="@font/code_pro"
         android:foregroundTint="@color/secondary_color"
-        android:hint="0.0"
+        android:hint="@string/placeholder"
         android:text=""
         android:textAlignment="center"
         android:textColor="@color/secondary_color"
