@@ -23,20 +23,20 @@
     </string-array>
 
     <string-array name="superifcie_unidades">
-        <item>cm2</item>
+        <item>cm²</item>
         <item>m2</item>
-        <item>in2</item>
-        <item>ft2</item>
-        <item>y2</item>
-        <item>mi2</item>
+        <item>in²</item>
+        <item>ft²</item>
+        <item>yrd²</item>
+        <item>mi²</item>
     </string-array>
 
     <string-array name="volumen_unidades">
-        <item>cm3</item>
+        <item>cm³</item>
         <item>lts</item>
-        <item>m3</item>
-        <item>in3</item>
-        <item>ft3</item>
+        <item>m³</item>
+        <item>in³</item>
+        <item>ft³</item>
         <item>gal</item>
     </string-array>
 
@@ -50,9 +50,9 @@
     </string-array>
 
     <string-array name="densidad_unidades">
-        <item>g/cm3</item>
-        <item>kg/m3</item>
-        <item>lb/ft3</item>
+        <item>g/cm³</item>
+        <item>kg/m³</item>
+        <item>lb/ft³</item>
         <item>lb/gal</item>
     </string-array>
 
