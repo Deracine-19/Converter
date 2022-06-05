@@ -8,17 +8,17 @@
     tools:context=".MainActivity">
 
     <Spinner
-        android:id="@+id/spnr_units2"
+        android:id="@+id/output_units_spnr"
         style="@style/SpinnerTheme_output"
-        android:layout_width="90dp"
+        android:layout_width="105dp"
         android:layout_height="41dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="128dp"
         android:layout_marginEnd="168dp"
         android:entries="@array/longitud_unidades"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_hint" />
 
@@ -27,6 +27,7 @@
         android:layout_width="199dp"
         android:layout_height="24dp"
         android:layout_marginTop="44dp"
+        android:editable="false"
         android:fontFamily="@font/alright_sans_light"
         android:text="@string/hint"
         android:textAlignment="center"
@@ -67,11 +68,11 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_title" />
 
     <Spinner
-        android:id="@+id/spnr_units"
+        android:id="@+id/input_unit_spnr"
         style="@style/SpinnerTheme"
-        android:layout_width="90dp"
+        android:layout_width="105dp"
         android:layout_height="41dp"
-        android:layout_marginStart="168dp"
+        android:layout_marginStart="155dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="168dp"
         android:entries="@array/longitud_unidades"
@@ -104,32 +105,32 @@
         android:ems="10"
         android:fontFamily="@font/code_pro"
         android:hint="@string/placeholder"
-        android:inputType="textPersonName"
+        android:inputType="number"
+        android:numeric="decimal"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spnr_units"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/input_unit_spnr" />
 
     <TextView
         android:id="@+id/txt_output"
         android:layout_width="243dp"
         android:layout_height="49dp"
         android:layout_marginStart="84dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="32dp"
         android:background="@android:color/transparent"
         android:ems="10"
         android:fontFamily="@font/code_pro"
         android:foregroundTint="@color/secondary_color"
-        android:hint="@string/placeholder"
+        android:hint="0.0"
         android:text=""
         android:textAlignment="center"
         android:textColor="@color/secondary_color"
         android:textColorHint="@color/secondary_color"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spnr_units2" />
+        app:layout_constraintTop_toBottomOf="@+id/output_units_spnr" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
