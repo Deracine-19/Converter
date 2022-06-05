@@ -22,8 +22,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         //this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
-
-
         setContentView(activity_main);
 
         //Categories Spinner Styling
@@ -50,8 +48,6 @@ class MainActivity : AppCompatActivity() {
         units_spnr_input.adapter = units_spnr_input_adapter;
 
 
-
-
         //Units Spinner B Styling
         units_spnr_output = findViewById(R.id.output_units_spnr);
         val units_spnr_output_adapter: ArrayAdapter<*> = ArrayAdapter.createFromResource(
@@ -67,7 +63,9 @@ class MainActivity : AppCompatActivity() {
         // Input Box Change Listener
         editTxt_input.addTextChangedListener(object : TextWatcher {
 
-            override fun afterTextChanged(s: Editable) {}
+            override fun afterTextChanged(s: Editable) {
+
+            }
 
             override fun beforeTextChanged(s: CharSequence, start: Int,
                                            count: Int, after: Int) {
@@ -76,14 +74,13 @@ class MainActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence, start: Int,
                                        before: Int, count: Int) {
                 inputValidation()
+
             }
         })
 
         // Category Spinner Change Listener
         spnr_categorias.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
 
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 checkCategory()
@@ -94,18 +91,24 @@ class MainActivity : AppCompatActivity() {
     private fun inputValidation() {
         if (editTxt_input.text.toString().isEmpty()) {
             Toast.makeText(this@MainActivity, "Please enter a value :)", Toast.LENGTH_LONG).show()
+            txt_output.setText("")
+        } else {
+            evaluateConversion()
         }
     }
 
     private fun evaluateConversion() {
-        TODO("Not yet implemented")
+        if (input_unit_spnr.selectedItem.toString() == "km" && output_units_spnr.selectedItem.toString() == "m") {
+            val result = (editTxt_input.text.toString().toFloat() * 1000)
+            txt_output.text = String.format("%.2f", result)
+
+        }
     }
 
     private fun checkCategory() {
 
-        var units_spnr_input_adapter: ArrayAdapter<*>
-        var units_spnr_output_adapter: ArrayAdapter<*>
-
+        val units_spnr_input_adapter: ArrayAdapter<*>
+        val units_spnr_output_adapter: ArrayAdapter<*>
         
         if (spnr_categorias.selectedItem.toString() == "Densidad")
         {
