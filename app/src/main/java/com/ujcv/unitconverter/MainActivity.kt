@@ -15,6 +15,22 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    //Convertion factors by type maps
+    val longitud: HashMap<String, Float> =
+        hashMapOf("cm" to 1f, "m" to 0.01f, "in" to 0.39370f, "ft" to 0.032808f, "y" to 0.010936f, "mi" to 0.0000062137f)
+    val superficie: HashMap<String, Float> =
+        hashMapOf("cm" to 1f, "m" to 0.01f, "in" to 0.39370f, "ft" to 0.032808f, "ya" to 0.010936f, "ml" to 0.0000062137f)
+    val volumen: HashMap<String, Float> =
+        hashMapOf("cm" to 1f, "m" to 0.01f, "in" to 0.39370f, "ft" to 0.032808f, "ya" to 0.010936f, "ml" to 0.0000062137f)
+    val masa: HashMap<String, Float> =
+        hashMapOf("cm" to 1f, "m" to 0.01f, "in" to 0.39370f, "ft" to 0.032808f, "ya" to 0.010936f, "ml" to 0.0000062137f)
+    val densidad: HashMap<String, Float> =
+        hashMapOf("cm" to 1f, "m" to 0.01f, "in" to 0.39370f, "ft" to 0.032808f, "ya" to 0.010936f, "ml" to 0.0000062137f)
+
+    //Convertion Factors table
+    val tabla: HashMap<String, HashMap<String, Float>> =
+        hashMapOf("longitud" to longitud, "superficie" to superficie, "volumen" to volumen, "masa" to masa, "densidad" to densidad)
+
     lateinit var units_spnr_input: Spinner
     lateinit var units_spnr_output: Spinner
 
@@ -98,11 +114,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun evaluateConversion() {
-        if (input_unit_spnr.selectedItem.toString() == "km" && output_units_spnr.selectedItem.toString() == "m") {
-            val result = (editTxt_input.text.toString().toFloat() * 1000)
-            txt_output.text = String.format("%.2f", result)
+        var currType: HashMap<String, Float>? = tabla.get(spnr_categorias.selectedItem.toString())
+        var r: Float = (editTxt_input.text.toString().toFloat()/ currType?.get(input_unit_spnr.selectedItem.toString())!!)* currType?.get(output_units_spnr.selectedItem.toString())!!
+        //Asignarle el valor final al ouput de texto
+        txt_output.text = String.format("%.2f", r)
 
-        }
     }
 
     private fun checkCategory() {

@@ -5,15 +5,14 @@
     <string name="placeholder">0.0</string>
     
     <string-array name="categories">
-        <item>Longitud</item>
-        <item>Superficie</item>
-        <item>Volumen</item>
-        <item>Masa</item>
-        <item>Densidad</item>
+        <item>longitud</item>
+        <item>superficie</item>
+        <item>volumen</item>
+        <item>masa</item>
+        <item>densidad</item>
     </string-array>
 
     <string-array name="longitud_unidades">
-        <item>km</item>
         <item>m</item>
         <item>cm</item>
         <item>in</item>
